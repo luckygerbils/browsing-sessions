@@ -12,3 +12,7 @@ A firefox extension for managing multiple persistent sets of tabs.
 1. Install [NodeJS](https://nodejs.org)
 2. Run `npm install`
 3. Run `npm run dev` to run the extension in a temporary browser profile using [web-ext](https://github.com/mozilla/web-ext)
+
+## Attributions
+
+* Icons from the [bitsies!](https://www.iconfinder.com/iconsets/bitsies) iconset created by Recep Kütük.
