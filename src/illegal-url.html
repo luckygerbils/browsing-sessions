@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Invalid Page</title>
+    <style>
+      body {
+        max-width: 1000px;
+        margin: auto;
+      }
+      .url-copier {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .url {
+        margin-right: 1em;
+      }
+      .copy-success {
+        background-color: #99ee83;
+        border: 1px solid #54bf30;
+        color: #1d4f10;
+        border-radius: 3px;
+        padding: 0.25em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>URL cannot be opened by an extension</h1>
+    <p>This tab was saved as a URL that we couldn't automatically open:</p>
+    <div class="url-copier">
+      <a id="url" class="url"></a>
+      <button id="copy">Click to copy</button>
+    </div>
+    <p>
+      Special URLs like those starting with <code>chrome:</code>, <code>javascript:</code>, <code>data:</code>, <code>file:</code> or <code>about:</code>
+      cannot be opened by extensions for security reasons, so you will need to copy-and-paste the URL above into the address bar to re-open it.
+    </p>
+    <script src="illegal-url.js"></script>
+  </body>
+</html>

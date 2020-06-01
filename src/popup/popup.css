@@ -1,0 +1,84 @@
+header {
+    flex-wrap: nowrap;
+}
+header .header-buttons {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 1em;
+}
+header button {
+    margin-bottom: 0; /* Remove default browser style */
+}
+header button:not(:last-of-type) {
+    margin-right: 0.5em;
+}
+
+.panel-content {
+    padding: 1em;
+}
+
+.session-entry {
+    align-items: center;
+    margin-bottom: 5px;
+}
+.session-entry.session-entry-active .session-name {
+    font-weight: bold;;
+}
+
+.session-entry .session-name,
+.session-entry .text,
+.session-entry button:not(:last-of-type) {
+    margin-right: 0.5em;
+}
+
+.session-entry button {
+    margin-bottom: 0; /* Remove default browser style */
+}
+
+.session-entry .session-buttons {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 0.5em;
+}
+
+.panel-section-footer-button {
+    margin: 0; /* Default styles for some reason has lr margin -1, causing a scrollbar */
+    line-height: 1; /* Fix button height for full width ＋ */
+}
+button.panel-section-footer-button {
+    /* These styles weren't actually designed for buttons for some reason */
+    border: none;
+}
+
+.panel-with-back-button {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding-left: 0;
+}
+.back-button {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #efefef;
+    border: none;
+}
+.back-button:hover, .back-button:hover:active {
+    background-color: #e0e0e0;
+}
+
+.panel-with-back-button .panel-body {
+    box-shadow: 0 0 7px #0004;
+}
+
+.delete-button {
+    background-color: #d92015;
+    border-color: #aa0012;
+    color: white;
+}
+.delete-button:hover {
+    background-color: #aa0012;
+    border-color: #880000;
+}

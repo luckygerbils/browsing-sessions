@@ -1,0 +1,17 @@
+{
+  "name": "browsing-sessions",
+  "version": "1.0.0",
+  "scripts": {
+    "web-ext": "web-ext",
+    "copy:vendor": "mkdir -p src/vendor/preact; cp -uv node_modules/preact/dist/preact.module.js src/vendor/; cp -uv node_modules/preact/hooks/dist/hooks.module.js src/vendor/preact/; sed -i 's/from\"preact\"/from\"..\\/preact.module.js\"/' src/vendor/preact/hooks.module.js",
+    "dev": "npm run copy:vendor && web-ext run -s src --url 'about:debugging#/runtime/this-firefox'",
+    "clean": "rm -rfv src/vendor/*"
+  },
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "preact": "^10.4.4",
+    "web-ext": "^4.2.0"
+  },
+  "license": "GPL"
+}
