@@ -2,13 +2,13 @@ import { useState, useCallback, useEffect, useRef } from '../../vendor/preact/ho
 import { h } from '../../vendor/preact/preact.module.js';
 
 export function EditSessionPanel({ session, onAfterUpdate, onCancel }) {
-  console.log(session);
   const [ name, setName ] = useState(session.name);
   const changeName = useCallback(e => setName(e.target.value), []);
   const submit = useCallback(e => {
       e.preventDefault();
+      browser.runtime.sendMessage({ action: "updateSession", payload: { id: session.id, name } })
       onAfterUpdate && onAfterUpdate(session);
-  }, [session, onAfterUpdate]);
+  }, [session, name, onAfterUpdate]);
 
   const deleteSession = useCallback(() => {
     browser.runtime.sendMessage({ action: "deleteSession", payload: session.id })

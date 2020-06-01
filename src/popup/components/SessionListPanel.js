@@ -4,20 +4,24 @@ import { SessionListEntry } from './SessionListEntry.js';
 
 export function SessionListPanel(props) {
   const { currentSessionId, sessions, onNewSessionClick, onEditSessionClick } = props;
+
   const closeCurrentSession = useCallback(() => 
     browser.runtime.sendMessage({ action: "closeCurrentSession" }),
     [ ]);
+
   const editCurrentSession = useCallback(() =>
     onEditSessionClick(sessions[currentSessionId]),
     [ onEditSessionClick, sessions, currentSessionId ]);
 
+  const currentSession = sessions[currentSessionId];
+
   return (
     h("div", { class: "panel" },
       h("header", { class: "panel-section panel-section-header" }, 
-        !currentSessionId && h("div", { class: "text-section-header" }, h("i", null, "No Active Session")),
-        currentSessionId &&
+        !currentSession && h("div", { class: "text-section-header" }, h("i", null, "No Active Session")),
+        currentSession &&
           h(Fragment, null,
-            h("div", { class: "text-section-header" }, sessions[currentSessionId].name),
+            h("div", { class: "text-section-header" }, currentSession.name),
             h("div", { class: "header-buttons" },
               h("button", { class: "browser-style", onClick: editCurrentSession }, "Edit"),
               h("button", {  class: "browser-style default", onClick: closeCurrentSession }, "Close"),

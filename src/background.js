@@ -153,6 +153,12 @@ async function newSession(name) {
   loadSession(session);
 }
 
+async function updateSession(sessionUpdate) {
+  const { sessions={} } = await browser.storage.sync.get(["sessions"]);
+  Object.assign(sessions[sessionUpdate.id], sessionUpdate);
+  await browser.storage.sync.set({ sessions });
+}
+
 async function deleteSession(sessionId) {
   let { currentSessionId, sessions={} } = await browser.storage.sync.get(["currentSessionId", "sessions"]);
   console.log("Deleting session", sessionId, sessions[sessionId].name);
@@ -177,6 +183,7 @@ browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
   const action = {
     switchSession,
     newSession,
+    updateSession,
     deleteSession,
     closeCurrentSession
   }[request.action];
