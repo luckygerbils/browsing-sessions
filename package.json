@@ -1,6 +1,11 @@
 {
   "name": "browsing-sessions",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "homepage": "https://github.com/luckygerbils/browsing-sessions#readme",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/luckygerbils/browsing-sessions.git"
+  },
   "scripts": {
     "web-ext": "web-ext",
     "copy:vendor": "mkdir -p src/vendor/preact; cp -uv node_modules/preact/LICENSE src/vendor/preact/; cp -uv node_modules/preact/dist/preact.module.js src/vendor/preact/; cp -uv node_modules/preact/hooks/dist/hooks.module.js src/vendor/preact/; sed -i 's/from\"preact\"/from\".\\/preact.module.js\"/' src/vendor/preact/hooks.module.js",
