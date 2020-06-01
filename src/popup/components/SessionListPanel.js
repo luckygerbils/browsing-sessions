@@ -1,5 +1,5 @@
 import { useCallback } from '../../vendor/preact/hooks.module.js';
-import { h, Fragment } from '../../vendor/preact.module.js';
+import { h, Fragment } from '../../vendor/preact/preact.module.js';
 import { SessionListEntry } from './SessionListEntry.js';
 
 export function SessionListPanel(props) {

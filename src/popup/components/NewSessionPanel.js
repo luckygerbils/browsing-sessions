@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect, useRef } from '../../vendor/preact/hooks.module.js';
-import { h } from '../../vendor/preact.module.js';
+import { h } from '../../vendor/preact/preact.module.js';
 
 export function NewSessionPanel({ onAfterSubmit, onCancel }) {
   const [ name, setName ] = useState("");

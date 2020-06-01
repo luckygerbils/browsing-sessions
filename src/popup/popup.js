@@ -1,5 +1,5 @@
 /* eslint-env browser */
-import { h, render } from '../vendor/preact.module.js';
+import { h, render } from '../vendor/preact/preact.module.js';
 import { Popup } from "./components/Popup.js";
 
 const popupProps = {};

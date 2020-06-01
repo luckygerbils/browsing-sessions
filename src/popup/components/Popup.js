@@ -1,4 +1,4 @@
-import { h } from '../../vendor/preact.module.js';
+import { h } from '../../vendor/preact/preact.module.js';
 import { useState, useCallback } from '../../vendor/preact/hooks.module.js';
 import { NewSessionPanel } from './NewSessionPanel.js';
 import { SessionListPanel } from './SessionListPanel.js';

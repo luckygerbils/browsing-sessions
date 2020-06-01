@@ -1,5 +1,5 @@
 import { useCallback } from '../../vendor/preact/hooks.module.js';
-import { h } from '../../vendor/preact.module.js';
+import { h } from '../../vendor/preact/preact.module.js';
 
 export function SessionListEntry({ session, onEditClick, active }) {
   const edit = useCallback(() => onEditClick(session), [onEditClick, session]);
