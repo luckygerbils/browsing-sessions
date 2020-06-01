@@ -31,7 +31,7 @@ export function EditSessionPanel({ session, onAfterUpdate, onCancel }) {
               h("input", { type: "text", id: "name", ref: nameInput, value: name, onInput: changeName })
           ),
           h("div", { class: "panel-formElements-item" },
-              h("button", { class: "browser-style delete-button", onClick: deleteSession }, "Delete Session")
+              h("button", { type: "button", class: "browser-style delete-button", onClick: deleteSession }, "Delete Session")
           )
         ),
         h("footer", { class: "panel-section panel-section-footer" },
