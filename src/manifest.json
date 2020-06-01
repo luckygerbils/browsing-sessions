@@ -8,7 +8,7 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "browsing-sessions@anasta.si",
-      "strict_min_version": "68.8esr"
+      "strict_min_version": "76.0"
     }
   },  
 
