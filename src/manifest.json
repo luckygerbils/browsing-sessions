@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Browsing Sessions",
-  "version": "1.0.1",
+  "version": "1.0.2",
 
   "description": "Manage multiple persistent sets of tabs",
 
